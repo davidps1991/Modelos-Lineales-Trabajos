@@ -116,3 +116,4 @@ hist(data[,"Edad"],col="red")
 # Utilice la función boxplot()
 
 boxplot(data[,"Edad"],main = "Variable Edad",col = "yellow")
+
