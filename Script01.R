@@ -12,7 +12,6 @@ setwd(dir)
 list.files()
 
 data<-read.table("data.txt",header=TRUE,dec=",",sep="\t")
-str(data)
 
 # 2.2 Calcular el mínimo, la media, el máximo de la variable Edad.
 # Utilice las funciones min(), mean(), max(), de ser necesario utilice 
@@ -96,7 +95,7 @@ nrow(criterio_cargas)
 # 3.4 Seleccione los sujetos con una Deuda superior o igual a 500 dólares
 # y más ($>$) de 8 Dias_Atraso.
 
-criterio_deuda<-subset(data,subset=data[,"Deuda"]>=500)
+criterio_deuda<-subset(data,subset=data[,"Deuda"]>=500 & data[,"Dias_Atraso"]>8)
 nrow(criterio_deuda)
 #View(criterio_deuda)
 
@@ -115,5 +114,5 @@ hist(data[,"Edad"],col="red")
 # 4.2 Realice un diagrama de cajas de la variable Edad, utilice como color de relleno: green
 # Utilice la función boxplot()
 
-boxplot(data[,"Edad"],main = "Variable Edad",col= "yellow")
+boxplot(data[,"Edad"],main = "Variable Edad",col= "green")
 
