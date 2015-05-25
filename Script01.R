@@ -115,5 +115,5 @@ hist(data[,"Edad"],col="red")
 # 4.2 Realice un diagrama de cajas de la variable Edad, utilice como color de relleno: green
 # Utilice la función boxplot()
 
-boxplot(data[,"Edad"],main = "Variable Edad",col = "yellow")
+boxplot(data[,"Edad"],main = "Variable Edad",col= "yellow")
 
