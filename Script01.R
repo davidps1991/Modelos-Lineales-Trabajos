@@ -9,7 +9,6 @@
 
 dir<-"C:/Users/TOSHIBA/Desktop"
 setwd(dir)
-list.files()
 
 data<-read.table("data.txt",header=TRUE,dec=",",sep="\t")
 
@@ -77,33 +76,28 @@ porcentaje
 # Utilice la función subset()
 
 criterio_edad<-subset(data,subset=data[,"Edad"]>40)
-nrow(criterio_edad)
 #View(criterio_edad)
 
 # 3.2 Seleccione los sujetos que tienen Vivienda Propia.
 
 criterio_vivienda<-subset(data,subset=data[,"Vivienda"]=="Propia")
-nrow(criterio_vivienda)
 #View(criterio_vivienda)
 
 # 3.3 Seleccione los sujetos que tienen más ($>$) de dos cargas familiatres.
 
 criterio_cargas<-subset(data,subset=data[,"Cargas"]>2)
-nrow(criterio_cargas)
 #View(criterio_cargas)
 
 # 3.4 Seleccione los sujetos con una Deuda superior o igual a 500 dólares
 # y más ($>$) de 8 Dias_Atraso.
 
 criterio_deuda<-subset(data,subset=data[,"Deuda"]>=500 & data[,"Dias_Atraso"]>8)
-nrow(criterio_deuda)
 #View(criterio_deuda)
 
 # 3.5 Seleccione los sujetos con un Score mayor o igual a 900 puntos, una Edad menor
 # o igual a 35 años y con más ($>$) de 3 tarjetas de crédito (Numero_TC).
 
 criterio_varios<-subset(data,subset=data[,"Score"]>=900 & data[,"Edad"]<=35 & data[,"Numero_TC"]>3)
-nrow(criterio_varios)
 #View(criterio_varios)
 
 # 4. Gráficos:
